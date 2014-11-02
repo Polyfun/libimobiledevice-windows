@@ -1,0 +1,63 @@
+Building libimobiledevice for Windows
+=====================================
+
+By Polyfun (GitHub) aka ShellShock (MobileRead)
+2nd November 2014
+
+1. Get source files, set up VS project
+2. Build libcnary
+3. Build libgen
+4. Build libplist
+5. Build libusbmuxd
+6. Build libimobiledevice
+7. Exporting libimobiledevice entry points
+8. Finished
+
+Get source files and dependencies
+---------------------------------
+
+Get the following GitHub repositories:
+
+libimobiledevice
+libimobiledevice-windows 
+libplist
+libusbmuxd
+
+This should give you the following sub-directories:
+
+libimobiledevice
+libimobiledevice-windows
+libplist
+libusbmuxd
+
+Get openssl from http://slproweb.com/products/Win32OpenSSL.html; you need both 32 bit and 64 bit installers, 
+e.g., Win32 OpenSSL v1.0.1j and Win64 OpenSSL v1.0.1j. Run the installers and choose the location as 
+libimobiledevice-windows\OpenSSL-Win32 or libimobiledevice-windows\OpenSSL-x64. NOTE: THE 64 BIT INSTALLER 
+TO INSTALLS TO OpenSSL-Win64 BY DEFAULT. THIS MUST BE CHANGED TO OpenSSL-x64 (in the libimobiledevice-windows
+directory). Also choose to copy the OpenSSL directories to /bin directory.
+
+Your libimobiledevice-windows directory should have the following sub-directories:
+
+lib
+libcnary
+libgen
+libiconv
+libxml2
+OpenSSL-Win32
+OpenSSL-x64
+vendors
+
+Open the Visual Studio 2008 solution libimobiledevice-windows\imobiledevice.sln, and you should be ready to rebuild. 
+
+There are 4 build configurations:
+
+Debug, Win32
+Release, Win32
+Debug, x64
+Release, x64
+
+Although the libxml2 source is included in the libimobiledevice-windows repository I have not built it in VS 2008. 
+The libxml2 source code is there to provide the headers for the other projects, and the lib directory contains 
+the libxml2 import libraries.
+
+Similarly, the libiconv source is included for the headers, but not built.

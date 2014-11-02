@@ -230,5 +230,5 @@ $RECYCLE.BIN/
 *.msp
 
 # Open SSL
-openssl-1.0.1j_WIN32/
-openssl-1.0.1j_X64/
+OpenSSL-Win32/
+OpenSSL-x64/

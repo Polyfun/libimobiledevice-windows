@@ -33,6 +33,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libimobiledevice", "..\libi
 		{F1E13E5F-1366-4E7E-9E6C-A172A48B9987} = {F1E13E5F-1366-4E7E-9E6C-A172A48B9987}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75E37D14-E480-4460-9613-68DAAD79FF6E}"
+	ProjectSection(SolutionItems) = preProject
+		imobiledevice.txt = imobiledevice.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
